@@ -1,0 +1,15 @@
+{
+  "name": "visit-euroup",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/brightparagon/visit-euroup.git",
+  "author": "<kyeongmo2@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "react": "^16.4.1",
+    "react-router-dom": "^4.3.1"
+  },
+  "devDependencies": {
+    "webpack": "^4.16.0"
+  }
+}
