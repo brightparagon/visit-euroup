@@ -13,7 +13,7 @@ db.once('open', () => {
 });
 db.on('error', console.error);
 mongoose.connect(dbUrl, {
-  safe: true
+  safe: true,
 });
 
 app.use(morgan('dev'));
