@@ -3,6 +3,8 @@ import mongoose from 'mongoose';
 import morgan from 'morgan';
 import path from 'path';
 
+require('dotenv').config();
+
 const app = express();
 const port = 3000;
 const dbUrl = process.env.MONGODB_URI;
