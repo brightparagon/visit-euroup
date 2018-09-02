@@ -1,7 +1,8 @@
 import express from 'express';
 import mongoose from 'mongoose';
 import morgan from 'morgan';
-import path from 'path';
+// import path from 'path';
+import routesApi from './routes';
 
 require('dotenv').config();
 
@@ -19,10 +20,11 @@ mongoose.connect(dbUrl, {
 });
 
 app.use(morgan('dev'));
-app.use('/', express.static(path.resolve(__dirname, 'public')));
-app.get('*', (req, res) => {
-  res.sendfile(path.resolve(__dirname, 'public/index.html'));
-});
+// app.use('/', express.static(path.resolve(__dirname, 'public')));
+app.use('/api', routesApi);
+// app.get('*', (req, res) => {
+//   res.sendFile(path.resolve(__dirname, '../public/index.html'));
+// });
 
 app.listen(port, () => {
   console.log(`Express is listening on port: ${port}`);
