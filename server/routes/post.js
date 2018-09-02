@@ -12,3 +12,5 @@ router.get('all', (req, res, next) => {
     });
   });
 });
+
+export default router;
